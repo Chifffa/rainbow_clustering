@@ -78,7 +78,7 @@ class RainbowClustering:
         elif self.feature_mode == 'rgb':
             feature_image = thresh_image
         else:
-            raise ValueError
+            raise ValueError(f'Available feature mode are ("hsv", "rgb"), got "{self.feature_mode}".')
         feature_image = feature_image / np.expand_dims(self.feature_mode_factor, axis=(0, 1))
 
         # Add pixels coordinates as features.
