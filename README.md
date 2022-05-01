@@ -1,7 +1,7 @@
 # Clustering pixels in rainbow images by color
 
-Simple clustering of pixels in different rainbow/spectrum images by it's color.
-All you need to do this is:
+Simple clustering of pixels in different rainbow/spectrum images by its color.
+All you need to do it:
 * Make **threshold binarization** to preprocess white and/or black background as 
 single cluster.
 * Obtain feature vectors from images using **RGB** or **HSV** color scheme.
@@ -44,7 +44,7 @@ of the **`RainbowClustering`** object:
 * **`clusters`** - number of clusters (background is not included here). If there is a
 white/black background in the image, it will be processed as additional single cluster (see examples).
 Otherwise, there will be exactly specified number of clusters.
-* **`feature_mode`** - `rgb` or `hsv` features to use. In most cases `rgb` seem
+* **`feature_mode`** - `rgb` or `hsv` features to use. In most cases `rgb` seems
 to be better, but sometimes `hsv` looks better.
 * **`verbose`** - set to `True` to enable verbosity mode.
 * **`white_threshold`** - threshold value for white color `[0, 255]`. 
@@ -58,10 +58,10 @@ By default, it uses the **`clusters`** value as weight. You can pass `0` if you 
 to use pixels coordinates features, or you can pass any float value.
 
 **`predict`** method returns:
-* **`mask`** -  numpy array with shape (height, width, clusters). Each value of it is an integer number
+* **`mask`** -  numpy array with shape (height, width). Each value of it is an integer number
 in the range `[0, clusters]`.
-* **`centroids`** - numpy array with shape (clusters, 3). There are `clusters` vectors.
-Each vector as an **RGB color vector**. It is a color value of the cluster's center. 
+* **`centroids`** - numpy array with shape (clusters, 3). There are `clusters` vectors in the array.
+Each vector as an **RGB color vector** - a color value of the cluster's center. 
 
 ### 3. Some examples
 
